@@ -10,20 +10,8 @@
 
     <name>zutassociation</name>
     <url>http://www.zutassociation.vip</url>
-    <description>中原工学院大学生社团联合会网站系统-Web管理端</description>
-
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>zutassociation-admin</module>
-        <module>zutassociation-common</module>
-        <module>zutassociation-framework</module>
-        <module>zutassociation-system</module>
-        <module>zutassociation-generator</module>
-        <module>zutassociation-quartz</module>
-    </modules>
-
-    <!--jar统一管理-->
+    <description>中原工学院大学生社团联合会网站系统</description>
+    
     <properties>
         <zutassociation.version>1.0.0</zutassociation.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -208,6 +196,16 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <modules>
+        <module>zutassociation-admin</module>
+        <module>zutassociation-framework</module>
+        <module>zutassociation-system</module>
+        <module>zutassociation-quartz</module>
+        <module>zutassociation-generator</module>
+        <module>zutassociation-common</module>
+    </modules>
+    <packaging>pom</packaging>
 
 
     <dependencies>

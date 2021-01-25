@@ -11,7 +11,9 @@
 
     <artifactId>zutassociation-generator</artifactId>
 
-    <description>generator代码生成</description>
+    <description>
+        generator代码生成
+    </description>
 
     <dependencies>
 
