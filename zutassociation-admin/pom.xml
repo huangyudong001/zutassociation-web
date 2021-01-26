@@ -67,12 +67,6 @@
             <artifactId>zutassociation-quartz</artifactId>
         </dependency>
 
-        <!-- 代码生成-->
-        <dependency>
-            <groupId>com.zutassociation</groupId>
-            <artifactId>zutassociation-generator</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>

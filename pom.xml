@@ -165,13 +165,6 @@
                 <artifactId>zutassociation-quartz</artifactId>
                 <version>${zutassociation.version}</version>
             </dependency>
-	
-            <!-- 代码生成-->
-            <dependency>
-                <groupId>com.zutassociation</groupId>
-                <artifactId>zutassociation-generator</artifactId>
-                <version>${zutassociation.version}</version>
-            </dependency>
 			
             <!-- 核心模块-->
             <dependency>
@@ -202,7 +195,6 @@
         <module>zutassociation-framework</module>
         <module>zutassociation-system</module>
         <module>zutassociation-quartz</module>
-        <module>zutassociation-generator</module>
         <module>zutassociation-common</module>
     </modules>
     <packaging>pom</packaging>
