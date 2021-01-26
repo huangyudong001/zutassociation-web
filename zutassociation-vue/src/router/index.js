@@ -41,6 +41,7 @@ export const constantRoutes = [
   {
     path: '/login',
     component: (resolve) => require(['@/views/login'], resolve),
+    meta: { title: '登录', noCache: true },
     hidden: true
   },
   {
@@ -60,7 +61,7 @@ export const constantRoutes = [
     children: [
       {
         path: 'index',
-        component: (resolve) => require(['@/views/index_22'], resolve),
+        component: (resolve) => require(['@/views/home'], resolve),
         name: '首页',
         meta: { title: '首页', icon: 'dashboard', noCache: true, affix: true }
       }

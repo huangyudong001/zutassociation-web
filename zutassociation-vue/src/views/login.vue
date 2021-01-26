@@ -177,7 +177,7 @@ export default {
   color: #bfbfbf;
 }
 .login-code {
-  width: 33%;
+  //width: 33%;
   height: 38px;
   float: right;
   img {
