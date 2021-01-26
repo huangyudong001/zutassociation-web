@@ -48,7 +48,7 @@ public class SysNewsController extends BaseController
     /**
      * 根据新闻编号获取详细信息
      */
-    @PreAuthorize("@ss.hasPermi('system:News:query')")
+    @PreAuthorize("@ss.hasPermi('system:news:query')")
     @GetMapping(value = "/{newsId}")
     public AjaxResult getInfo(@PathVariable Long newsId)
     {
