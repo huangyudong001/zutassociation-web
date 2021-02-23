@@ -22,6 +22,7 @@ import ParentView from '@/components/ParentView';
     title: 'title'               // 设置该路由在侧边栏和面包屑中展示的名字
     icon: 'svg-name'             // 设置该路由的图标，对应路径src/assets/icons/svg
     breadcrumb: false            // 如果设置为false，则不会在breadcrumb面包屑中显示
+    affix: true                  如果设置为true，则标记将附加在“tags”视图中
   }
  */
 
@@ -94,19 +95,6 @@ export const constantRoutes = [
       }
     ]
   },
-  {
-    path: '/job',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'log',
-        component: (resolve) => require(['@/views/monitor/job/log'], resolve),
-        name: 'JobLog',
-        meta: { title: '调度日志' }
-      }
-    ]
-  }
 ]
 
 export default new Router({
