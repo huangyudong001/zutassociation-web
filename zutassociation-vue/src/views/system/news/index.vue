@@ -1,4 +1,4 @@
-<template>
+<template xmlns:s="http://www.w3.org/1999/html">
   <div class="app-container">
     <el-form :model="queryParams" ref="queryForm" :inline="true" v-show="showSearch" label-width="68px">
       <el-form-item label="新闻标题" prop="newsTitle">
@@ -116,6 +116,11 @@
       @pagination="getList"
     />
 
+    <div v-for="item in newsList">
+      <div>{{item.newsTitle}}</div>
+      <div v-html="item.newsContent"></div>
+<!--      <div escape="false">{{item.newsContent}}</div>-->
+    </div>
     <!-- 添加或修改新闻对话框 -->
     <el-dialog :title="title" :visible.sync="open" width="780px" append-to-body>
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
