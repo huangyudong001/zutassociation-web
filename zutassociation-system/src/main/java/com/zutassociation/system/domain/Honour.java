@@ -1,6 +1,5 @@
 package com.zutassociation.system.domain;
 
-
 import com.zutassociation.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -9,73 +8,73 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 /**
- * 新闻表 news
+ * 光荣榜表 honour
  *
  * @author 黄玉东
  * @version 1.0
- * @date 2021/2/25 15:40
+ * @date 2021/3/18 19:55
  */
-public class News extends BaseEntity {
+public class Honour extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 新闻ID
+     * 光荣榜ID
      */
-    private Long newsId;
+    private Long honourId;
 
     /**
-     * 新闻标题
+     * 光荣榜标题
      */
-    private String newsTitle;
+    private String honourTitle;
 
     /**
-     * 新闻内容
+     * 光荣榜内容
      */
-    private String newsContent;
+    private String honourContent;
 
     /**
-     * 新闻状态（0正常 1关闭）
+     * 光荣榜状态（0正常 1关闭）
      */
     private String status;
 
     /**
-     * 新闻点击量
+     * 光荣榜点击量
      */
     private Long click;
 
-    public Long getNewsId() {
-        return newsId;
+    public Long getHonourId() {
+        return honourId;
     }
 
-    public void setNewsId(Long newsId) {
-        this.newsId = newsId;
+    public void setHonourId(Long honourId) {
+        this.honourId = honourId;
     }
 
-    public void setNewsTitle(String newsTitle) {
-        this.newsTitle = newsTitle;
+    @NotBlank(message = "政策法规标题不能为空")
+    @Size(min = 0, max = 50, message = "政策法规标题不能超过50个字符")
+    public String getHonourTitle() {
+        return honourTitle;
     }
 
-    @NotBlank(message = "新闻标题不能为空")
-    @Size(min = 0, max = 50, message = "新闻标题不能超过50个字符")
-    public String getNewsTitle() {
-        return newsTitle;
+    public void setHonourTitle(String honourTitle) {
+        this.honourTitle = honourTitle;
     }
 
-    public void setNewsContent(String newsContent) {
-        this.newsContent = newsContent;
+    public String getHonourContent() {
+        return honourContent;
     }
 
-    public String getNewsContent() {
-        return newsContent;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public void setHonourContent(String honourContent) {
+        this.honourContent = honourContent;
     }
 
     public String getStatus() {
         return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Long getClick() {
@@ -89,9 +88,9 @@ public class News extends BaseEntity {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
-                .append("newsId", getNewsId())
-                .append("newsTitle", getNewsTitle())
-                .append("newsContent", getNewsContent())
+                .append("honourId", getHonourId())
+                .append("honourTitle", getHonourTitle())
+                .append("honourContent", getHonourContent())
                 .append("status", getStatus())
                 .append("createBy", getCreateBy())
                 .append("createTime", getCreateTime())
